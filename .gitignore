@@ -1,6 +1,5 @@
-/MfcDlgDemo/*.aps
-/MfcDlgDemo/*.user
-/MfcDlgDemo/*.filters
-/MfcDlgDemo/x64
-/x64
-/.vs
+/**/*.aps
+/**/*.user
+/**/*.filters
+/**/x64
+/**/.vs
