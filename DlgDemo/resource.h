@@ -1,11 +1,11 @@
 ﻿//{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ 生成的包含文件。
-// 供 MfcDlgDemo.rc 使用
+// 供 DlgDemo.rc 使用
 //
 #define IDM_ABOUTBOX                    0x0010
 #define IDD_ABOUTBOX                    100
 #define IDS_ABOUTBOX                    101
-#define IDD_MFCDLGDEMO_DIALOG           102
+#define IDD_DLGDEMO_DIALOG              102
 #define IDR_MAINFRAME                   128
 
 // Next default values for new objects

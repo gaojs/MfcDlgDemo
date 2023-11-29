@@ -1,11 +1,11 @@
 ﻿
-// MfcDlgDemoDlg.cpp: 实现文件
+// DlgDemoDlg.cpp: 实现文件
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "MfcDlgDemo.h"
-#include "MfcDlgDemoDlg.h"
+#include "DlgDemo.h"
+#include "DlgDemoDlg.h"
 #include "afxdialogex.h"
 
 #ifdef _DEBUG
@@ -50,29 +50,27 @@ END_MESSAGE_MAP()
 
 
 
-CMfcDlgDemoDlg::CMfcDlgDemoDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_MFCDLGDEMO_DIALOG, pParent)
+CDlgDemoDlg::CDlgDemoDlg(CWnd *pParent /*=nullptr*/)
+	: CDialogEx(IDD_DLGDEMO_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CMfcDlgDemoDlg::DoDataExchange(CDataExchange* pDX)
-{
+void CDlgDemoDlg::DoDataExchange(CDataExchange *pDX) {
 	CDialogEx::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CMfcDlgDemoDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CDlgDemoDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-        ON_BN_CLICKED(IDOK, &CMfcDlgDemoDlg::OnBnClickedOk)
-        END_MESSAGE_MAP()
+  ON_BN_CLICKED(IDOK, &CDlgDemoDlg::OnBnClickedOk)
+END_MESSAGE_MAP()
 
 
 // CMfcDlgDemoDlg 消息处理程序
 
-BOOL CMfcDlgDemoDlg::OnInitDialog()
-{
+BOOL CDlgDemoDlg::OnInitDialog() {
 	CDialogEx::OnInitDialog();
 
 	// 将“关于...”菜单项添加到系统菜单中。
@@ -105,7 +103,7 @@ BOOL CMfcDlgDemoDlg::OnInitDialog()
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CMfcDlgDemoDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CDlgDemoDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -122,8 +120,7 @@ void CMfcDlgDemoDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  来绘制该图标。  对于使用文档/视图模型的 MFC 应用程序，
 //  这将由框架自动完成。
 
-void CMfcDlgDemoDlg::OnPaint()
-{
+void CDlgDemoDlg::OnPaint() {
 	if (IsIconic())
 	{
 		CPaintDC dc(this); // 用于绘制的设备上下文
@@ -149,14 +146,13 @@ void CMfcDlgDemoDlg::OnPaint()
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
 //显示。
-HCURSOR CMfcDlgDemoDlg::OnQueryDragIcon()
-{
+HCURSOR CDlgDemoDlg::OnQueryDragIcon() {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
 
 
-void CMfcDlgDemoDlg::OnBnClickedOk() {
+void CDlgDemoDlg::OnBnClickedOk() {
   CWnd *btn = GetDlgItem(IDOK);
   btn->SetWindowText(_T("已经无响应了"));
   long long i = LLONG_MAX;

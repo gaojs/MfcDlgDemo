@@ -1,5 +1,5 @@
 ﻿
-// MfcDlgDemo.h: PROJECT_NAME 应用程序的主头文件
+// DlgDemo.h: PROJECT_NAME 应用程序的主头文件
 //
 
 #pragma once
@@ -11,14 +11,13 @@
 #include "resource.h"		// 主符号
 
 
-// CMfcDlgDemoApp:
+// CDlgDemoApp:
 // 有关此类的实现，请参阅 MfcDlgDemo.cpp
 //
 
-class CMfcDlgDemoApp : public CWinApp
-{
+class CDlgDemoApp : public CWinApp {
 public:
-	CMfcDlgDemoApp();
+  CDlgDemoApp();
 
 // 重写
 public:
@@ -29,4 +28,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CMfcDlgDemoApp theApp;
+extern CDlgDemoApp theApp;

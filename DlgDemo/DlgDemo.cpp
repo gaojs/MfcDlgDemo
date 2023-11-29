@@ -1,28 +1,27 @@
 ﻿
-// MfcDlgDemo.cpp: 定义应用程序的类行为。
+// DlgDemo.cpp: 定义应用程序的类行为。
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "MfcDlgDemo.h"
-#include "MfcDlgDemoDlg.h"
+#include "DlgDemo.h"
+#include "DlgDemoDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CMfcDlgDemoApp
+// CDlgDemoApp
 
-BEGIN_MESSAGE_MAP(CMfcDlgDemoApp, CWinApp)
+BEGIN_MESSAGE_MAP(CDlgDemoApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
-// CMfcDlgDemoApp 构造
+// CDlgDemoApp 构造
 
-CMfcDlgDemoApp::CMfcDlgDemoApp()
-{
+CDlgDemoApp::CDlgDemoApp() {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
 
@@ -31,15 +30,14 @@ CMfcDlgDemoApp::CMfcDlgDemoApp()
 }
 
 
-// 唯一的 CMfcDlgDemoApp 对象
+// 唯一的 CDlgDemoApp 对象
 
-CMfcDlgDemoApp theApp;
+CDlgDemoApp theApp;
 
 
-// CMfcDlgDemoApp 初始化
+// CDlgDemoApp 初始化
 
-BOOL CMfcDlgDemoApp::InitInstance()
-{
+BOOL CDlgDemoApp::InitInstance() {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
 	//则需要 InitCommonControlsEx()。  否则，将无法创建窗口。
@@ -71,7 +69,7 @@ BOOL CMfcDlgDemoApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
-	CMfcDlgDemoDlg dlg;
+	CDlgDemoDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

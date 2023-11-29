@@ -1,16 +1,15 @@
 ﻿
-// MfcDlgDemoDlg.h: 头文件
+// CDlgDemoDlg.h: 头文件
 //
 
 #pragma once
 
 
-// CMfcDlgDemoDlg 对话框
-class CMfcDlgDemoDlg : public CDialogEx
-{
+// CDlgDemoDlg 对话框
+class CDlgDemoDlg : public CDialogEx {
 // 构造
 public:
-	CMfcDlgDemoDlg(CWnd* pParent = nullptr);	// 标准构造函数
+CDlgDemoDlg(CWnd *pParent = nullptr); // 标准构造函数
 
 // 对话框数据
 #ifdef AFX_DESIGN_TIME
